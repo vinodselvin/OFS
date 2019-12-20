@@ -1,0 +1,14 @@
+.md-app {
+    border: 1px solid rgba(#000, .12);
+}
+
+.md-drawer {
+    width: 230px;
+    max-width: calc(100vw - 125px);
+}
+
+.dress_image{
+    width: auto !important;
+    height: 200px !important;
+    /*padding: 15px !important;*/
+}
