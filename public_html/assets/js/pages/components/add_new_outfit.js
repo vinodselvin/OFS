@@ -9,23 +9,21 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
     }
   },
   template: `
-                <div>
-                    <md-field>
-                        <label for="dress_type">OutFits</label>
-                        <md-select v-model="dress_type" name="dress_type" id="dress_type">
-                            <md-option value="Tops" >Tops</md-option>
-                            <md-option value="Bottoms">Bottoms</md-option>
-                            <md-option value="Footwear">Footwear</md-option>
-                        </md-select>
-                    </md-field>
-                    <md-field><label>Upload Images</label><md-file v-on:change.native="saveImage" accept="image/*" multiple/></md-field>
-                    <md-button class="md-raised md-primary"  v-on:click.native="saveWears" >Save</md-button>
-                    <md-field>
-                        <div class="md-layout md-gutter md-alignment-center">
-                            <img v-for="e_dress_image in dress_image_list" :src="e_dress_image" class="md-layout-item md-medium-size-100 md-small-size-100 md-xsmall-size-100 dress_image"/>
-                        </div>
-                    </md-field>
-                </div>`,
+    <div>
+        <md-field>
+            <label for="dress_type">OutFits</label>
+            <md-select v-model="dress_type" name="dress_type" id="dress_type">
+                <md-option value="Tops" >Tops</md-option>
+                <md-option value="Bottoms">Bottoms</md-option>
+                <md-option value="Footwear">Footwear</md-option>
+            </md-select>
+        </md-field>
+        <md-field><label>Upload Images</label><md-file v-on:change.native="saveImage" accept="image/*" multiple/></md-field>
+        <md-button class="md-raised md-primary"  v-on:click.native="saveWears" >Save</md-button>
+        <div class="md-layout md-gutter md-alignment-center">
+            <img v-for="e_dress_image in dress_image_list" :src="e_dress_image" class="md-layout-item md-medium-size-100 md-small-size-100 md-xsmall-size-100 dress_image"/>
+        </div>
+    </div>`,
     methods: {
         saveWears: function(event){
             var dress_type = this.dress_type;
@@ -35,7 +33,6 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
                 this.dress_image_list = dress;
                 
                 saveImages(dress_type, dress);
-                
                 
             }
             else{
@@ -67,4 +64,5 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
         }
     }
 });
-        export  {AddNewOutfit};
+
+export  {AddNewOutfit};
