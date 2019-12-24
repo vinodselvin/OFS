@@ -5,10 +5,11 @@
 function saveImages(dress_type, dress){
     
     var img_obj = localStorage.getItem('images_pool');
-    img_obj = img_obj == null ? {} : JSON.parse(img_obj);
+    img_obj = img_obj == null ? [] : JSON.parse(img_obj);
     
     //if file exists
-    if(img_obj.hasOwnProperty(dress_type)){
+//    if(img_obj.hasOwnProperty(dress_type)){
+    if(img_obj.length > 0){
         img_obj[dress_type] = img_obj[dress_type].concat(dress);
     }
     else{
