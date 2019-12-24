@@ -18,8 +18,9 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
                 <md-option value="Footwear">Footwear</md-option>
             </md-select>
         </md-field>
-        <md-field><label>Upload Images</label><md-file v-on:change.native="saveImage" accept="image/*" multiple/></md-field>
-        <md-button class="md-raised md-primary"  v-on:click.native="saveWears" >Save</md-button>
+        <md-field><label>Upload Images</label><md-file v-on:change.native="saveImage" accept="image/*" value="" multiple/></md-field>
+        <md-button class="md-raised md-default"  v-on:click.native="saveWears" >Upload</md-button>
+        <md-button class="md-raised md-primary"  v-on:click.native="saveWearsAndContinue" >Upload and Continue</md-button>
         <div class="md-layout md-gutter md-alignment-center">
             <div v-for="(e_dress_image, e_dress_type) in dress_image_list" class="md-medium-size-100" style="width: 90%; padding-top: 20px;">
                 <h1>{{ e_dress_type }}</h1>
@@ -65,6 +66,11 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
                 
                 this.dress_image = all_files;
             }
+        },
+        saveWearsAndContinue: function(event){
+            this.saveWears(event);
+            
+            window.location.href = window.location.pathname+"?page=liked_wears";
         }
     }
 });

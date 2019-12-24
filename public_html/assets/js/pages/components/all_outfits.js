@@ -8,7 +8,7 @@ var AllOutfits = Vue.component('AddNewOutfit', {
   },
   mounted() {
       var script = document.createElement('script');
-      script.setAttribute('src', 'https://raw.githubusercontent.com/vinodselvin/Kombu-Image-Previewer/master/image-previewer.js');
+      script.setAttribute('src', 'https://vinodselvin.github.io/Kombu-Image-Previewer/image-previewer.js');
       document.head.appendChild(script);
   },
   template: `

@@ -10,5 +10,73 @@
 .dress_image{
     width: auto !important;
     height: 200px !important;
-    /*padding: 15px !important;*/
+    padding: 5px !important;
 }
+
+.hide{display: none;}
+
+._img_tb_previewed {
+    display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 30%;
+    margin: 1%;
+}
+
+._previewer{
+    position:relative;
+    height:100%;
+    margin:auto; 
+    text-align: center; 
+    background: black; 
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+
+.img-prev{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    width: 100vh;
+    max-width: 100%;
+}
+._close_{float: right; margin-right: 20px; margin-top: 20px; width: 20px; color: white; z-index: 1061;}
+._left{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:20px;
+    margin:auto;
+    width: 20px;
+    transform: rotate(180deg);
+    z-index: 1061;
+}
+._left:hover, ._right:hover, ._close_:hover, ._rotate_:hover{
+    opacity:0.6;
+}
+._left:active, ._right:active, ._close_:active, ._rotate_:active{
+    opacity:0.4;
+}
+._right{
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:20px;
+    margin:auto;
+    width: 20px;
+    z-index: 1061;
+}
+._close_, ._left, ._right, ._rotate_{cursor: pointer;}
+._rotate_{float: left; margin-left: 20px; margin-top: 15px; width: 30px; color: white; z-index: 1061; opacity: 0.7;}
+#_resolution_, ._file_name_{float: right; position: absolute; width: auto; color: white; z-index: 1061; bottom: 0; right: 20px;}
+._file_name_{margin-left: 0px; float: left; left: 20px; right: auto; max-width: 50%;white-space: nowrap;
+             overflow: hidden;
+             text-overflow: ellipsis;}

@@ -62,7 +62,17 @@
             </template>
 
 
-
+            <div class="_previewer" id="_img_previewer" tabindex="0">
+            <div class="_previewer_container">
+                <img src="https://vinodselvin.github.io/Kombu-Image-Previewer/icons/close.png" class="_close_" id="_close_" onclick="_closePreviewer();">
+                <img src="https://vinodselvin.github.io/Kombu-Image-Previewer/icons/rotate.png" class="_rotate_" id="_rotate_" onclick="_rotateRight();">
+                <img src="https://vinodselvin.github.io/Kombu-Image-Previewer/icons/right.png" class="_left" id="_left">
+                <img class="img-prev" id="img-prev" src='' onmouseover="_showImagePixels(this);">
+                <img src="https://vinodselvin.github.io/Kombu-Image-Previewer/icons/right.png" class="_right" id="_right">
+                <p id="_resolution_"></p>
+                <p class="_file_name_" id="_file_name_"></p>
+            </div>
+            </div>
 
 
         </div>
