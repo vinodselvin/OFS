@@ -50,13 +50,12 @@ function generateAndSaveImagesCombination(){
     
     var tops = images.hasOwnProperty('Tops') && images.Tops && images.Tops.length > 0 ? getIndexes(images.Tops) : [];
     var bottoms = images.hasOwnProperty('Bottoms') && images.Bottoms && images.Bottoms.length > 0 ? getIndexes(images.Bottoms) : [];
-    var footwears = images.hasOwnProperty('Footwear') && images.Footwear && images.Footwear.length > 0 ? getIndexes(images.Footwear) : [];
 
-    var images_ids = [tops, bottoms, footwears];
+    var images_ids = [tops, bottoms];
     
     var combos = allPossibleCombinations(images_ids);
     
-    console.log(combos);
+    return combos;
 }
 
 function getIndexes(arr){

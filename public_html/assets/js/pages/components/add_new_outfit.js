@@ -15,7 +15,6 @@ var AddNewOutfit = Vue.component('AddNewOutfit', {
             <md-select v-model="dress_type" name="dress_type" id="dress_type">
                 <md-option value="Tops" >Tops</md-option>
                 <md-option value="Bottoms">Bottoms</md-option>
-                <md-option value="Footwear">Footwear</md-option>
             </md-select>
         </md-field>
         <md-field><label>Upload Images</label><md-file v-on:change.native="saveImage" accept="image/*" value="" multiple/></md-field>
